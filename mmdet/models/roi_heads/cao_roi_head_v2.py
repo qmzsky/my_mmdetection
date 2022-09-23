@@ -4,7 +4,6 @@ import torch.nn as nn
 from ..builder import HEADS
 from .standard_roi_head import StandardRoIHead
 
-
 class RoiAttention(nn.Module):
 
     def __init__(self):

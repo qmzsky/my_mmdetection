@@ -23,6 +23,8 @@ from .sparse_roi_head import SparseRoIHead
 from .standard_roi_head import StandardRoIHead
 from .trident_roi_head import TridentRoIHead
 from .cao_roi_head import CaoRoiHead
+from .cao_roi_head_v2 import CaoRoiHeadV2
+
 
 __all__ = [
     'BaseRoIHead', 'CascadeRoIHead', 'DoubleHeadRoIHead', 'MaskScoringRoIHead',
