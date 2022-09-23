@@ -38,18 +38,17 @@ class PositionwiseFeedForward(nn.Module):
         self.dropout = nn.Dropout(dropout)
 
     def forward(self, x):
-
-        residual = x
         x = x.flatten(-2)
         x = x.permute(0, 2, 1)
+
+        residual = x
         x = self.w_2(F.relu(self.w_1(x)))
         x = self.dropout(x)
-        x = x.permute(0, 1, 2)
-        x = x.reshape(-1, 256, 7, 7)
         x += residual
-
         x = self.layer_norm(x)
 
+        x = x.permute(0, 1, 2)
+        x = x.reshape(-1, 256, 7, 7)
         return x
 
 
