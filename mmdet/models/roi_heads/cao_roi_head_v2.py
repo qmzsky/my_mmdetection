@@ -38,8 +38,11 @@ class PositionwiseFeedForward(nn.Module):
     def forward(self, x):
 
         residual = x
+        print("1", x.shape)
         x.flatten(-2)
+        print("2", x.shape)
         x = x.permute(0, 2, 1)
+        print("3", x.shape)
         x = self.w_2(F.relu(self.w_1(x)))
         x = self.dropout(x)
         x = x.permute(0, 1, 2)
