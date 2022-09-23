@@ -56,7 +56,7 @@ class PositionwiseFeedForward(nn.Module):
 class CaoRoiHeadV2(StandardRoIHead):
 
     def __init__(self, **kwargs):
-        super(CaoRoiHead, self).__init__(**kwargs)
+        super(CaoRoiHeadV2, self).__init__(**kwargs)
         self.roiAttention = RoiAttention()
         self.mlp = PositionwiseFeedForward(256, 1024)
 
