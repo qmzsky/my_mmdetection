@@ -3,6 +3,8 @@ import torch.nn as nn
 
 from ..builder import HEADS
 from .standard_roi_head import StandardRoIHead
+import torch.nn.functional as F
+
 
 class RoiAttention(nn.Module):
 
