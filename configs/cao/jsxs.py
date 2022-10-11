@@ -10,17 +10,17 @@ dataset_type = 'CocoDataset'
 classes = ('jsxs',)
 data = dict(
     train=dict(
-        img_prefix='./data/cy/jsxs/train2017/',
+        img_prefix='/data/cy/jsxs/train2017/',
         classes=classes,
-        ann_file='./data/cy/jsxs/annotations/instances_train2017.json'),
+        ann_file='/data/cy/jsxs/annotations/instances_train2017.json'),
     val=dict(
-        img_prefix='./data/cy/jsxs/val2017/',
+        img_prefix='/data/cy/jsxs/val2017/',
         classes=classes,
-        ann_file='./data/cy/jsxs/annotations/instances_train2017.json'),
+        ann_file='/data/cy/jsxs/annotations/instances_train2017.json'),
     test=dict(
-        img_prefix='./data/cy/jsxs/val2017/',
+        img_prefix='/data/cy/jsxs/val2017/',
         classes=classes,
-        ann_file='./data/cy/jsxs/annotations/instances_train2017.json'))
+        ann_file='/data/cy/jsxs/annotations/instances_train2017.json'))
 
-load_from = './checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth'
+load_from = 'checkpoints/faster_rcnn_r50_fpn_1x_coco_20200130-047c8118.pth'
 
