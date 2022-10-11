@@ -22,4 +22,4 @@ model = dict(
         bbox_head=dict(num_classes=1))
     )
 
-load_from = 'checkpoints/cao_roi_faster.pth.pth'
+load_from = 'checkpoints/cao_roi_faster.pth'
