@@ -2,8 +2,8 @@ _base_ = '../faster_rcnn/faster_rcnn_r50_fpn_1x_coco.py'
 
 model = dict(
     roi_head=dict(
-        bbox_head=dict(num_classes=1),
-        mask_head=dict(num_classes=1)))
+        bbox_head=dict(num_classes=1))
+    )
 
 # 修改数据集相关设置
 dataset_type = 'CocoDataset'
