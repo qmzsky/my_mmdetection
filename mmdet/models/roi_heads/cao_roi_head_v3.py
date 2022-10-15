@@ -33,7 +33,7 @@ class RoiAttention(nn.Module):
 class CaoRoiHeadV3(StandardRoIHead):
 
     def __init__(self, **kwargs):
-        super(CaoRoiHead, self).__init__(**kwargs)
+        super(CaoRoiHeadV3, self).__init__(**kwargs)
         self.roiAttention = RoiAttention()
 
     def _bbox_forward(self, x, rois):
