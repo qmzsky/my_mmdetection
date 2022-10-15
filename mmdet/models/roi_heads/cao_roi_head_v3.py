@@ -17,12 +17,12 @@ class RoiAttention(nn.Module):
         x = x.flatten(-2)
         x = x.permute(0, 2, 1)
         x = x.permute(1, 0, 2)
-        residual = x
 
+        residual = x
         x = self.self_attn(x, x, x)[0]
-        x = x.permute(1, 0, 2)
         x += residual
 
+        x = x.permute(1, 0, 2)
         x = self.bn(x)
         x = self.gelu(x)
         x = x.permute(0, 2, 1)
