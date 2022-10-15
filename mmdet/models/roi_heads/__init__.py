@@ -24,6 +24,7 @@ from .standard_roi_head import StandardRoIHead
 from .trident_roi_head import TridentRoIHead
 from .cao_roi_head import CaoRoiHead
 from .cao_roi_head_v2 import CaoRoiHeadV2
+from .cao_roi_head_v3 import CaoRoiHeadV3
 
 
 __all__ = [
